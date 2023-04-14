@@ -1,0 +1,193 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background-color: black;
+}
+
+body::before {
+  left: 0;
+}
+
+body::after {
+  right: 0;
+}
+
+header {
+  background-color: #000000;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  font-family: "HechoAMano-Regular", sans-serif;
+  text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(255, 255, 255), 0 0 0.2em rgb(255, 255, 255);
+  font-size: 28px;
+  background-image: url("images/DoodleBackground.png");
+  background-size: cover;
+  background-color: rgb(255, 197, 39);
+  justify-content: center;
+  gap: 0;
+  line-height: 1;
+}
+
+.image {
+  width: 40%; /* Cambia el ancho de la imagen a 50% */
+}
+
+.hide-content {
+  opacity: 0;
+  visibility: hidden;
+  background-image: none;
+}
+
+.whiteFont {
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  line-height: 2;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  max-width: 300px;
+}
+
+a {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+h3 {
+  margin-bottom: 5px;
+}
+
+img {
+  display: block;
+  margin-bottom: 5px;
+  max-width: 100%;
+}
+
+footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+
+footer img {
+  max-width: 150px;
+}
+
+.btn {
+  background-color: rgba(0, 0, 0, 0.5); 
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease-in-out;
+  font-family: "SergioTrendy", sans-serif;
+}
+
+.btn:hover {
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7); 
+}
+
+.btn span {
+  font-weight: bold; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1); 
+}
+
+@font-face {
+  font-family: "HechoAMano-Regular";
+  src: url("Fonts/HechoAMano-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SergioTrendy";
+  src: url("Fonts/SergioTrendy.otf") format("truetype");
+}

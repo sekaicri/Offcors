@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OFFCORSS</title>
+    <link rel="stylesheet" href="estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+    <style>
+      a-scene .a-enter-vr-button {
+        display: none;
+      }
+
+      a-scene .a-enter-ar-button {
+        display: none;
+      }
+
+      #main-spotify {
+        position: relative;
+        z-index: 2; 
+        top: 80px;
+      }
+    </style>
+</head>
+<header>
+    <img src="images/Logo.png" alt="Imagen">
+</header>
+<body>
+  <main id="main-content" class="visible">
+    <a-scene>
+      <a-assets>
+        <img id="card" src="assets/asset.jpeg" />
+        <a-asset-item id="avatarModel" src="assets/Daniel_Dance.glb"></a-asset-item>
+      </a-assets>
+
+      <a-camera position="0 1.5 1" look-controls="enabled: false"></a-camera>
+
+      <a-gltf-model rotation="0 0 0 " position="0 1.5 0" scale="0.3 0.3 0.3" src="#avatarModel" animation-mixer>
+        <a-image position="0 1 -1" scale="3 3 3" src="images/Fondo-VR.png"></a-image>
+      </a-gltf-model>
+    </a-scene>
+
+    <section id="main-spotify">
+      <iframe style="border-radius: 12px" src="https://open.spotify.com/embed/playlist/0Kno47Xyi7vKiPAKLBUqSa?utm_source=generator" width="100%" height="300" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </section>
+  </main>
+
+  <footer style="position: fixed; bottom: 0; left: 0; width: 100%;">
+    <section>
+      <img src="images/Logo.png" alt="Imagen">
+      <p>&copy; 2023 Todos los derechos reservados </p>
+    </section>
+  </footer>
+</body>
+</html>
