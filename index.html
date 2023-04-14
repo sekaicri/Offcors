@@ -1,49 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OFFCORSS</title>
-    <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
     <header>
-        <img src="images/Logo.png" alt="Imagen">
+      <img src="images/Logo.png" alt="Imagen" />
     </header>
     <main id="main-content" class="visible">
-        <section>
-            <img src="images/Camera.png" alt="Imagen" class="image">
-            <p class="text"><span class="whiteFont">Activa tu cámara, escanea el sticker y bailemos juntos las canciones más top</span></p>
-            <a  class="btn" id="btn-activar-camara">Activar cámara</a>
-        </section>
+      <section>
+        <img src="images/Camera.png" alt="Imagen" class="image" />
+        <p class="text">
+          <span class="whiteFont"
+            >Activa tu cámara, escanea el sticker y bailemos juntos las
+            canciones más top</span
+          >
+        </p>
+        <a class="btn" id="btn-activar-camara">Activar cámara</a>
+      </section>
     </main>
 
     <footer>
-        <section>
-            <img src="images/Logo.png" alt="Imagen">
-            <p>&copy; 2023 Todos los derechos reservados </p>
-        </section>
+      <section>
+        <img src="images/Logo.png" alt="Imagen" />
+        <p>&copy; 2023 Todos los derechos reservados</p>
+      </section>
     </footer>
 
-    
     <script>
-    const btnActivarCamara = document.getElementById("btn-activar-camara");
-  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-    btnActivarCamara.addEventListener("click", () => {
-        getMobileOperatingSystem();
-    function getMobileOperatingSystem() {
-      if (/android/i.test(userAgent) || /windows phone/i.test(userAgent)) {
+      const btnActivarCamara = document.getElementById("btn-activar-camara");
+      btnActivarCamara.addEventListener("click", () => {
         window.location.href = "ar.html";
-      }
-      else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        alert("Tu dispositivo no es compatible con AR.");
-        window.location.href = "withoutar.html";
-      }
-    }
-});
-
-</script>
-
-</body>
+      });
+    </script>
+  </body>
 </html>

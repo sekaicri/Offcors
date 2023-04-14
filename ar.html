@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OFFCORSS</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
@@ -13,86 +13,164 @@
 
     <style>
       body {
-          margin-bottom: 70px; /* altura del footer */
+        margin-bottom: 70px; /* altura del footer */
       }
       #ar-container {
-position: absolute;
-top: 0;
-left: 0;
-bottom: 0;
-right: 0;
-z-index: 1;
-}
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+      }
 
-#main-spotify {
-position: fixed;
-bottom: 0;
-width: 90%;
-z-index: 2;
-}
+      #main-spotify {
+        position: fixed;
+        bottom: 0;
+        width: 90%;
+        z-index: 2;
+      }
 
-a-scene .a-enter-vr-button {
-display: none;
-}
+      a-scene .a-enter-vr-button {
+        display: none;
+      }
 
-a-scene .a-enter-ar-button {
-display: none;
-}
-  </style>
+      a-scene .a-enter-ar-button {
+        display: none;
+      }
+    </style>
   </head>
   <header>
-    <img src="images/Logo.png" alt="Imagen">
-</header>
+    <img src="images/Logo.png" alt="Imagen" />
+  </header>
   <body>
-    <a-scene mindar-image=" warmupTolerance:6; missTolerance:3; filterMinCF:0.0001; filterBeta: 0.001; uiScanning: #example-scanning-overlay; imageTargetSrc: assets/targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene
+      mindar-image=" warmupTolerance:6; missTolerance:3; filterMinCF:0.0001; filterBeta: 0.001; uiScanning: #example-scanning-overlay; imageTargetSrc: assets/targets.mind;"
+      color-space="sRGB"
+      renderer="colorManagement: true, physicallyCorrectLights"
+      vr-mode-ui="enabled: false"
+      device-orientation-permission-ui="enabled: false"
+    >
       <a-assets>
-	<img id="card" src="assets/asset.jpeg" />
-	<a-asset-item id="avatarModel" src="assets/Daniel_Dance.glb"></a-asset-item>
+        <img id="card" src="assets/asset.jpeg" />
+        <a-asset-item
+          id="avatarModel"
+          src="assets/Daniel_Dance.glb"
+        ></a-asset-item>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
       <a-entity id="example-target" mindar-image-target="targetIndex: 0">
-        <a-gltf-model rotation="0 0 0 " position="0 0 0" scale="0.6 0.6 0.6" src="#avatarModel"  animation-mixer>
-          <a-image position="0 1 -1" scale="3 3 3" src="images/Fondo-VR.png"></a-image>
-        </a-entity>
+        <a-gltf-model
+          rotation="0 0 0 "
+          position="0 0 0"
+          scale="0.6 0.6 0.6"
+          src="#avatarModel"
+          animation-mixer
+        >
+          <a-image
+            position="0 1 -1"
+            scale="3 3 3"
+            src="images/Fondo-VR.png"
+          ></a-image>
+        </a-gltf-model>
+      </a-entity>
 
       <a-entity id="example-target1" mindar-image-target="targetIndex: 1">
-        <a-gltf-model rotation="0 0 0 " position="0 0 0" scale="0.6 0.6 0.6" src="#avatarModel"  animation-mixer>
-          <a-image position="0 1 -1" scale="3 3 3" src="images/Fondo-VR.png"></a-image>
+        <a-gltf-model
+          rotation="0 0 0 "
+          position="0 0 0"
+          scale="0.6 0.6 0.6"
+          src="#avatarModel"
+          animation-mixer
+        >
+          <a-image
+            position="0 1 -1"
+            scale="3 3 3"
+            src="images/Fondo-VR.png"
+          ></a-image>
+        </a-gltf-model>
+      </a-entity>
+
+      <a-entity id="example-target2" mindar-image-target="targetIndex: 2">
+        <a-gltf-model
+          rotation="0 0 0 "
+          position="0 0 0"
+          scale="0.6 0.6 0.6"
+          src="#avatarModel"
+          animation-mixer
+        >
+          <a-image
+            position="0 1 -1"
+            scale="3 3 3"
+            src="images/Fondo-VR.png"
+          ></a-image>
+        </a-gltf-model>
       </a-entity>
     </a-scene>
 
-    <main id="main-spotify" style="display:none; background-color: transparent;background-image: none">
+    <main
+      id="main-spotify"
+      style="
+        display: none;
+        background-color: transparent;
+        background-image: none;
+      "
+    >
       <section>
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0Kno47Xyi7vKiPAKLBUqSa?utm_source=generator" width="90%" height="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>    </section>
+        <iframe
+          style="border-radius: 12px"
+          src="https://open.spotify.com/embed/playlist/0Kno47Xyi7vKiPAKLBUqSa?utm_source=generator"
+          width="90%"
+          height="300"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      </section>
     </main>
 
-    <footer style="position: fixed; bottom: 0; left: 0; width: 100%;">
+    <footer style="position: fixed; bottom: 0; left: 0; width: 100%">
       <section>
-          <img src="images/Logo.png" alt="Imagen">
-          <p>&copy; 2023 Todos los derechos reservados </p>
+        <img src="images/Logo.png" alt="Imagen" />
+        <p>&copy; 2023 Todos los derechos reservados</p>
       </section>
-  </footer>
+    </footer>
 
-  <script>
-  const exampleTarget = document.querySelector("#example-target");
-  const exampleTarget1 = document.querySelector("#example-target1");
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
 
-  exampleTarget.addEventListener("targetFound", (event) => {
-    document.getElementById("main-spotify").style.display = "block";
-  });
+      const exampleTarget = document.querySelector("#example-target");
+      const exampleTarget1 = document.querySelector("#example-target1");
+      const exampleTarget2 = document.querySelector("#example-target2");
 
-  exampleTarget.addEventListener("targetLost", (event) => {
-    document.getElementById("main-spotify").style.display = "none";
-  });
-  exampleTarget1.addEventListener("targetFound", (event) => {
-    document.getElementById("main-spotify").style.display = "block";
-  });
+      exampleTarget.addEventListener("targetFound", (event) => {
+        document.getElementById("main-spotify").style.display = "block";
+      });
 
-  exampleTarget1.addEventListener("targetLost", (event) => {
-    document.getElementById("main-spotify").style.display = "none";
-  });
-  </script>
+      exampleTarget.addEventListener("targetLost", (event) => {
+        document.getElementById("main-spotify").style.display = "none";
+      });
+
+      exampleTarget1.addEventListener("targetFound", (event) => {
+        document.getElementById("main-spotify").style.display = "block";
+      });
+
+      exampleTarget1.addEventListener("targetLost", (event) => {
+        document.getElementById("main-spotify").style.display = "none";
+      });
+
+      exampleTarget2.addEventListener("targetFound", (event) => {
+        document.getElementById("main-spotify").style.display = "block";
+      });
+
+      exampleTarget2.addEventListener("targetLost", (event) => {
+        document.getElementById("main-spotify").style.display = "none";
+      });
+        });
+
+    </script>
   </body>
 </html>
